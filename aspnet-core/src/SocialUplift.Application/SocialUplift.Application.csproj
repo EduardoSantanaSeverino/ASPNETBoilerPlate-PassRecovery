@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <VersionPrefix>1.0.0.0</VersionPrefix>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>SocialUplift.Application</AssemblyName>
+    <PackageId>SocialUplift.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>SocialUplift</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="AccountSettings\Dto\CommentTargetingDto.cs" />
+    <Compile Remove="AccountSettings\Dto\HashtagTargetingDto.cs" />
+    <Compile Remove="AccountSettings\Dto\LocationTargetingDto.cs" />
+    <Compile Remove="AccountSettings\Dto\UsernameTargetingDto.cs" />
+    <Compile Remove="AccountSettings\Map\CommentTargetingMapProfile.cs" />
+    <Compile Remove="AccountSettings\Map\HashtagTargetingMapProfile.cs" />
+    <Compile Remove="AccountSettings\Map\LocationTargetingMapProfile.cs" />
+    <Compile Remove="AccountSettings\Map\UsernameTargetingDtoProfile.cs" />
+    <Compile Remove="ADO\AdoEntityHelpers.cs" />
+    <Compile Remove="ADO\AdoEntityHelpersMySql.cs" />
+    <Compile Remove="ADO\DBService.cs" />
+    <Compile Remove="ADO\DBServiceMySql.cs" />
+    <Compile Remove="ADO\IDBService.cs" />
+    <Compile Remove="BackgrownJob\AddActionsToPoolJob.cs" />
+    <Compile Remove="BackgrownJob\AsyncHelpers.cs" />
+    <Compile Remove="BackgrownJob\CancelCampaignJob.cs" />
+    <Compile Remove="BackgrownJob\DoActionsFromPoolJob.cs" />
+    <Compile Remove="BackgrownJob\UpdatePersonalDataJob.cs" />
+    <Compile Remove="CampaignsDetails\CampaignDetailAppService.cs" />
+    <Compile Remove="CampaignsDetails\ICampaignDetailAppService.cs" />
+    <Compile Remove="CampaignsFeatures\CampaignFeatureAppService.cs" />
+    <Compile Remove="CampaignsFeatures\ICampaignFeatureAppService.cs" />
+    <Compile Remove="Configuration\ConfigurationAppService.cs" />
+    <Compile Remove="Configuration\IConfigurationAppService.cs" />
+    <Compile Remove="Workers\IPersonalDataWorker.cs" />
+    <Compile Remove="Workers\ITwoFactorWorker.cs" />
+    <Compile Remove="Workers\PersonalDataWorker.cs" />
+    <Compile Remove="Workers\TwoFactorWorker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocialUplift.Core\SocialUplift.Core.csproj" />
+    <ProjectReference Include="..\SocialUplift.EntityFrameworkCore\SocialUplift.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AccountSettings\Map\" />
+    <Folder Include="ADO\" />
+    <Folder Include="BackgrownJob\" />
+  </ItemGroup>
+</Project>
